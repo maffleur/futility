@@ -55,6 +55,10 @@ powerFA <-
 
 summary(powerFA)
 
+# If the interim result is right on the futility boundary, what effect do I need to see at the final analysis
+# for the study to be positive?
+exp((log(MDD) - informationRate * log(futilityBoundaryHR))/(1-informationRate))
+
 # use futile package to plot the operating characteristics vs. the futility boundary for a given information fraction
 install.packages("futile", repos = "https://rspm.roche.com/Non-Validated-Preview/latest")
 library(futile)
