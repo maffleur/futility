@@ -54,3 +54,8 @@ powerFA <-
   )
 
 summary(powerFA)
+
+# use futile package to plot the operating characteristics vs. the futility boundary for a given information fraction
+install.packages("futile", repos = "https://rspm.roche.com/Non-Validated-Preview/latest")
+library(futile)
+chooseBoundary(t = 0.3, boundary = 0.95, alternative = 0.65, mdd = 0.771, survival = TRUE)
