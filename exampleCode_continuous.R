@@ -53,3 +53,8 @@ powerFA <-
 summary(powerFA)
 
 (MDD - informationRate*futility_meanDiff)/(1-informationRate)
+
+# use the futile package to plot the operating characteristics vs futility boundary for a given information fraction
+install.packages("futile", repos = "https://rspm.roche.com/Non-Validated-Preview/latest")
+library(futile)
+chooseBoundary(t = 0.5, boundary = 0.1, alternative = 0.24, mdd = 0.1431355)
